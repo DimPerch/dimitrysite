@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}
+Получить результаты тестов - легко
+{% endblock %}
+
+{% block content %}
+<div>
+    <h1>Заполни форму ниже</h1>
+    <form action="" method="post" name="get_test">
+        {{form.hidden_tag()}}
+        <p>
+            {{form.test.label()}}:<br>
+            {{form.test()}}<br>
+            {{form.name.label()}}:<br>
+            {{form.name()}}<br>
+            {{form.end_date.label()}}:<br>
+            {{form.end_date()}}<br>
+            {{form.time.label()}}:<br>
+            {{form.time()}}<br>
+            {{form.score.label()}}:<br>
+            {{form.score()}}<br>
+            {{form.submit()}}<br>
+        </p>
+    </form>
+</div>
+{% endblock %}
